@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Compétences par semestre</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        form { margin-bottom: 20px; }
+        input, select { padding: 6px; margin-right: 10px; }
+        button { padding: 6px 12px; }
+        .supprimer { color: red; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <h1>Gestion des compétences par semestre</h1>
+
+    <form action="{{ url_for('ajouter') }}" method="post">
+        <input type="text" name="nom" placeholder="Nom de la compétence" required />
+        <input type="text" name="niveau" placeholder="Niveau (ex: débutant)" required />
+        <select name="semestre" required>
+            <option value="">-- Choisir un semestre --</option>
+            <option value="S1">Semestre 1</option>
+            <option value="S2">Semestre 2</option>
+            <option value="S3">Semestre 3</option>
+            <option value="S4">Semestre 4</option>
+        </select>
+        <button type="submit">Ajouter</button>
+    </form>
+
+    {% if competences %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Semestre</th>
+                    <th>Compétence</th>
+                    <th>Niveau</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for comp in competences %}
+                <tr>
+                    <td>{{ comp.semestre }}</td>
+                    <td>{{ comp.nom }}</td>
+                    <td>{{ comp.niveau }}</td>
+                  
+                    <td><a href="{{ url_for('supprimer', id=comp.id) }}" class="supprimer" onclick="return confirm('Supprimer cette compétence ?')">Supprimer</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Aucune compétence ajoutée.</p>
+    {% endif %}
+</body>
+</html>
