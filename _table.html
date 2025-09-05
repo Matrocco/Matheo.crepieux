@@ -1,0 +1,25 @@
+<table>
+    <thead>
+        <tr>
+            <th>Semestre</th>
+            <th>Compétence</th>
+            <th>Niveau</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for comp in competences %}
+        <tr>
+            <td>{{ comp.semestre }}</td>
+            <td>{{ comp.nom }}</td>
+            <td>{{ comp.niveau }}</td>
+            <td>
+                <a href="{{ url_for('supprimer', id=comp.id) }}" class="supprimer"
+                   onclick="return confirm('Supprimer cette compétence ?')">
+                   Supprimer
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
