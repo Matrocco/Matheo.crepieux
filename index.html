@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js" >
+<html lang="fr" class="no-js" >
 <head>
 
     <!--- basic page needs
@@ -298,56 +298,6 @@
                     </table>
                 </section>
 
-
-
-                        
-        <!-- Compétence Flask --> 
-        <section id="form" class="s-works target-section" >
-        <div class="register" >
-                            <h1>Gestion des compétences par semestre</h1>
-        <form action="{{ url_for('ajouter') }}" method="post" classe="">
-            <input type="text" name="nom" placeholder="Nom de la compétence" required />
-            <input type="text" name="niveau" placeholder="Niveau (ex: débutant)" required />
-            <select name="semestre" required>
-                <option value="">-- Choisir un semestre --</option>
-                <option value="S1">Semestre 1</option>
-                <option value="S2">Semestre 2</option>
-                <option value="S3">Semestre 3</option>
-                <option value="S4">Semestre 4</option>
-            </select>
-            <button type="submit">Ajouter</button>
-        </form>
-        </div>
-        </section>
-<table>
-    <thead>
-        <tr>
-            <th>Semestre</th>
-            <th>Compétence</th>
-            <th>Niveau</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for comp in competences %}
-        <tr>
-            <td>{{ comp.semestre }}</td>
-            <td>{{ comp.nom }}</td>
-            <td>{{ comp.niveau }}</td>
-            <td>
-                <a href="{{ url_for('supprimer', id=comp.id) }}" class="supprimer"
-                   onclick="return confirm('Supprimer cette compétence ?')">
-                   Supprimer
-                </a>
-            </td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
-
-               
-
-        
  <!-- # footer 
         ================================================== -->
         <footer id="footer" class="s-footer target-section">
