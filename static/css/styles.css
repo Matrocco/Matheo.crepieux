@@ -135,15 +135,16 @@
     }
 
 
-        body {
+    body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Centre horizontalement */
+            align-items: center;     /* Centre verticalement */
             padding: 20px;
         }
 
-        .grid-container {
+    .grid-container {
             display: grid;
             grid-template-columns: repeat(5, 200px);
             gap: 15px;
@@ -151,7 +152,7 @@
         }
 
         /* En-têtes */
-        .header {
+    .header {
             padding: 15px 5px;
             color: white;
             font-weight: bold;
@@ -167,7 +168,7 @@
         .col-dev { background-color: #0d2c61; }
 
         /* Style des cartes de niveau */
-        .card {
+    .card {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -181,13 +182,13 @@
             border-radius: 2px;
         }
 
-        .card:hover {
+    .card:hover {
             transform: scale(1.02);
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
             filter: brightness(95%);
         }
 
-        .card span {
+    .card span {
             font-weight: bold;
             margin-bottom: 10px;
             display: block;
