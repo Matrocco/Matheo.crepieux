@@ -142,6 +142,7 @@
             justify-content: center; /* Centre horizontalement */
             align-items: center;     /* Centre verticalement */
             padding: 20px;
+            margin: 0;
         }
 
     .grid-container {
