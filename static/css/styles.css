@@ -3948,6 +3948,13 @@ td:last-child {
     padding: 50px 0;        /* Un peu d'espace en haut/bas */
 }
 
+.s-works .row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px; /* Espace entre le titre et le tableau */
+}
+
 .folio-entries {
     --width-grid-max: 1400px;
     margin-top      : var(--vspace-0_5);
