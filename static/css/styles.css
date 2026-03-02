@@ -173,7 +173,7 @@
             justify-content: center;
             align-items: center;
             height: 150px;
-            padding: 10px;
+            padding: center;
             text-decoration: none; /* Enlever le soulignement du lien */
             color: #333;
             font-size: 0.9rem;
