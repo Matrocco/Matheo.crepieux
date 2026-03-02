@@ -135,7 +135,90 @@
     }
 
 
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
 
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 200px);
+            gap: 15px;
+            text-align: center;
+        }
+
+        /* En-têtes */
+        .header {
+            padding: 15px 5px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-radius: 2px;
+        }
+
+        /* Colonnes de couleurs */
+        .col-admin { background-color: #c0261d; }
+        .col-connect { background-color: #d97d44; }
+        .col-prog { background-color: #e1b32d; }
+        .col-orch { background-color: #7eb95d; }
+        .col-dev { background-color: #0d2c61; }
+
+        /* Style des cartes de niveau */
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            padding: 10px;
+            text-decoration: none; /* Enlever le soulignement du lien */
+            color: #333;
+            font-size: 0.9rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-radius: 2px;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            filter: brightness(95%);
+        }
+
+        .card span {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Couleurs des niveaux (Opacité variable) */
+        /* Administrer */
+        .admin-1 { background-color: #e8d5d4; }
+        .admin-2 { background-color: #f2a4a0; }
+        .admin-3 { background-color: #c0261d; color: white; }
+
+        /* Connecter */
+        .connect-1 { background-color: #f1e2d9; }
+        .connect-2 { background-color: #e9ad89; }
+        .connect-3 { background-color: #d97d44; color: white; }
+
+        /* Programmer */
+        .prog-1 { background-color: #f4edd4; }
+        .prog-2 { background-color: #efd688; }
+        .prog-3 { background-color: #e1b32d; color: white; }
+
+        /* Orchestrer */
+        .orch-1 { background-color: #9cd181; }
+        .orch-2 { background-color: #7eb95d; color: white; }
+
+        /* Développer */
+        .dev-1 { background-color: #7ba3d6; }
+        .dev-2 { background-color: #0d2c61; color: white; }
+
+        /* Case vide */
+        .empty { visibility: hidden; }
 
 
 
