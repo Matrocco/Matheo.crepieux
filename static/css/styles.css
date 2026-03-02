@@ -146,10 +146,10 @@
         }
 
     .grid-container {
-            display: grid;
-            grid-template-columns: repeat(5, 200px);
-            gap: 15px;
-            text-align: center;
+        display: grid;
+        grid-template-columns: repeat(5, 200px); /* 5 colonnes */
+        gap: 15px;
+        margin: 0 auto; /* Sécurité pour le centrage horizontal */
         }
 
         /* En-têtes */
